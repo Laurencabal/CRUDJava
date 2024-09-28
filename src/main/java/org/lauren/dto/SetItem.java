@@ -1,7 +1,6 @@
-package com.example.classtoday.dto;
+package org.lauren.dto;
 
 import lombok.Data;
-
 @Data
 public class SetItem {
     private String msj = "Se agrego correctamente!!!";

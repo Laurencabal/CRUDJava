@@ -1,4 +1,4 @@
-package com.example.classtoday.dto;
+package org.lauren.dto;
 
 import lombok.Data;
 

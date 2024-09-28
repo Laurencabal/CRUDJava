@@ -1,9 +1,10 @@
-package com.example.classtoday;
+package org.lauren;
 
-import com.example.classtoday.dto.Store;
-import com.example.classtoday.dto.GetItem;
-import com.example.classtoday.dto.DeleteItem;
-import com.example.classtoday.dto.SetItem;
+import lombok.Locked;
+import org.lauren.dto.DeleteItem;
+import org.lauren.dto.SetItem;
+import org.lauren.dto.GetItem;
+import org.lauren.dto.Store;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
@@ -71,4 +72,9 @@ public class ApplicationStore {
         return new SetItem();
     }
 
+    @PutMapping("/sales/{id}")
+    public SetItem createUser(@PathVariable String id, @RequestBody Store store){
+        sales.set(Integer.parseInt(id), store.getName());
+        return new SetItem();
+    }
 }
